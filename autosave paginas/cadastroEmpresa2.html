@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+        
+        
+        
+        .botao{width: 200px;height: 50px; flex-shrink: 0; background: #FF7A00; color: #fff;text-align: center; 
+               font-family: Montserrat;font-size: 100%; border-color: #FF7A00;}
+
+               .botao-opcao {
+    margin-right: 10px; /* Ajuste o valor conforme necessário */
+}
+      </style>
+    <title>CADASTRO</title>
+</head>
+<body>
+    <div class="text-center container mt-3">
+        <h1 style="font-family: 'Montserrat', sans-serif;"><span style="color:#FF7A00;">Cadastrar</span> Fretes</h1>
+        <p>Cadastre sua empresa e garanta profissionais qualificados para sua carga</p>
+    </div>
+    
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="esquerdo">
+                    <form id="myForm" onsubmit="return validarFormulario()">
+                        <div class="mb-3">
+                            <label for="tipoDeCarga" class="form-label">Selecione o tipo de carga:</label>
+                            <div class="input-group">
+                                <select id="tipoDeCarga" name="tipoDeCarga" class="form-select" style="background-color: #D9D9D9;">
+                                    <option value="grao">Grãos</option>
+                                    <option value="cargaGeral">Carga Geral</option>
+                                    <option value="cargaViva">Carga Viva</option>
+                                    <option value="cargaSeca">Carga Seca</option>
+                                    <option value="cargaPerigosa">Carga Perigosa</option>
+                                    <option value="cargaFracionada">Carga Fracionada</option>
+                                    <option value="cargaRefrigerada">Carga Refrigerada</option>
+                                    <option value="cargaQuimica">Carga Química</option>
+                                    <option value="cargaMovel">Carga Móvel</option>
+                                    <option value="cargaPesada">Carga Pesada</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                               
+                            </div>
+                        </div>
+                        
+                        
+
+                        <div class="mb-3">
+                            <label for="pesoCarga" class="form-label">Peso da Carga</label>
+                            <input id="pesoCarga" style="background-color: #D9D9D9; width: 100%;" placeholder="Informe o peso da carga" type="text" class="form-control" required>
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+                <div class="esquerdo">
+                    <form>
+                        
+                    </form>
+                </div>
+                <div class="esquerdo">
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label">Local de Coleta</label>
+                            <input id="senha" style="background-color: #D9D9D9; width: 100%;" placeholder="" type="text" class="form-control" >
+                        </div>
+                    </form>
+                </div>
+                <div class="esquerdo">
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label">Local de Entrega</label>
+                            <input style="background-color: #D9D9D9; width: 100%;" placeholder="" type="text" class="form-control" >
+                        </div>
+                    </form>
+                </div>
+                <div class="esquerdo">
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label">Produto:</label>
+                            <input style="background-color: #D9D9D9; width: 100%;" placeholder="" type="text" class="form-control" >
+                        </div>
+                    </form>
+                </div>
+                <div class="esquerdo">
+                    <form>
+                        <div class="mb-3">
+                            <label for="tipoCarroceria" class="form-label">Selecione o tipo de carroceria do caminhão:</label>
+                            <div class="input-group">
+                                <select id="tipoCarroceria" name="tipoCarroceria" class="form-select" style="background-color: #D9D9D9;">
+                                    <option value="aberta">Carroceria Aberta</option>
+                                    <option value="fechada">Carroceria Fechada</option>
+                                    <option value="baixa">Carroceria Baixa</option>
+                                    <option value="graneleira">Carroceria Graneleira</option>
+                                    <option value="frigorifica">Carroceria Frigorífica</option>
+                                    <option value="bau">Baú</option>
+                                    <option value="cargaPesada">Carga Pesada</option>
+                                    <option value="prancha">Prancha</option>
+                                    <option value="plataforma">Plataforma</option>
+                                    <option value="portaContainer">Porta Container</option>
+                                    <option value="sider">Sider</option>
+                                    <option value="cacambaBasculante">Caçamba Basculante</option>
+                                    <option value="canavieira">Canavieira</option>
+                                    <option value="florestal">Florestal</option>
+                                    <option value="boiadeira">Boiadeira (Animais Vivos)</option>
+                                    <option value="silo">Silo</option>
+                                    <option value="cegonha">Cegonha</option>
+                                    <option value="tanque">Tanque</option>
+                                    <option value="botijoesDeGas">Botijões de Gás</option>
+                                    <option value="munck">Munck</option>
+                                    <option value="poliguindaste">Poliguindaste</option>
+                                </select>
+                              
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="container mt-4">
+                    <label class="form-label d-flex align-items-center justify-content-center">Selecione as opções que são necessarias: </label>
+                    <div class="d-flex align-items-center justify-content-center flex-column gap-3 gap-md-0" data-toggle="buttons">
+                        <div>
+                        <label style="width: 170px;" class="btn btn-outline-success botao-opcao" data-bs-toggle="button">
+                            <input id="opcao" value="lona" type="checkbox" class="btn-check" autocomplete="off"> LONA
+                        </label>
+                        <label style="width: 170px;" class="btn btn-outline-success botao-opcao" data-bs-toggle="button">
+                            <input id="opcao" value="pedagio" type="checkbox" class="btn-check" autocomplete="off"> PEDAGIO
+                        </label>
+                    </div>
+                        <div>
+                        <label style="width: 170px;" class="btn btn-outline-success botao-opcao" data-bs-toggle="button">
+                            <input id="opcao" value="rastreador" type="checkbox" class="btn-check" autocomplete="off"> RASTREADOR
+                        </label>
+                        <label style="width: 170px;" class="btn btn-outline-success botao-opcao" data-bs-toggle="button">
+                            <input id="opcao" value="agenciamento" type="checkbox" class="btn-check" autocomplete="off"> AGENCIAMENTO
+                        </label>
+                    </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+    
+            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                <img src="./img/meio forms.svg" alt="Imagem de Divisão" class=" d-none d-md-block">
+            </div>
+    
+            <div class="col-md-5 mt-1">
+                <div class="direito">
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label">Tipo de Carga</label>
+                            <input style="background-color: #D9D9D9;" placeholder="Santos" type="text" class="form-control" >
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="direito">
+                    <form>
+                        <div class="mb-3">
+                            <label for="km" class="form-label">KM</label>
+                            <input id="km" style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="formaPagamento" class="form-label">Selecione a forma de pagamento:</label>
+                    <div class="input-group">
+                        <select id="formaPagamento" name="formaPagamento" class="form-select" style="background-color: #D9D9D9;">
+                            <option value="pix">PIX</option>
+                            <option value="boleto">Boleto Bancário</option>
+                            <option value="transferencia">Transferência Bancária</option>
+                            <option value="dinheiro">Dinheiro</option>
+                        </select>
+                    </div>
+                </div>
+                
+
+
+
+
+
+                
+                
+                
+                
+
+
+
+
+
+                <div class="direito mt-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="valorServico" class="form-label">Valor do Serviço</label>
+                            <input id="valorServico" style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="direito">
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label">OBS</label>
+                            <input style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control" >
+                        </div>
+                    </form>
+                </div>
+                <div style="text-align: right;" class="col text-right">
+                    <a href="   " style="text-align: center; align-items: center;" type="submit"  class=" botao btn btn-primary" >Cadastrar</a> 
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+    
+    
+    
+
+
+<script>
+     // Função para formatar um número como uma quantia em quilômetros com separador de milhares e decimal corretos
+     function formatarComoQuilometros(valor) {
+        return new Intl.NumberFormat('pt-BR', {
+            style: 'decimal',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }).format(valor) + ' km';
+    }
+
+    // Adicione um ouvinte de evento para o evento de alteração do campo de entrada
+    const kmInput = document.getElementById('km');
+
+    kmInput.addEventListener('input', function () {
+        const valorInserido = parseFloat(kmInput.value.replace(',', '.'));
+        if (!isNaN(valorInserido)) {
+            kmInput.value = formatarComoQuilometros(valorInserido);
+        }
+    });
+
+    // Função para formatar o peso da carga como kg ou t
+    function formatarPeso(peso) {
+        if (peso < 1000) {
+            return peso + ' kg';
+        } else {
+            return (peso / 1000).toFixed(2) + ' t';
+        }
+    }
+
+    // Adicione um ouvinte de evento para o evento de alteração do campo de entrada
+    const pesoCargaInput = document.getElementById('pesoCarga');
+
+    pesoCargaInput.addEventListener('input', function () {
+        const valorInserido = parseFloat(pesoCargaInput.value.replace(',', '.'));
+        if (!isNaN(valorInserido)) {
+            pesoCargaInput.value = formatarPeso(valorInserido);
+        }
+    });
+
+     // Função para formatar um número como uma quantia em dinheiro com separador de milhares e decimal corretos
+     function formatarComoDinheiro(valor) {
+        return new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+            currencyDisplay: 'symbol'
+        }).format(valor);
+    }
+
+    // Adicione um ouvinte de evento para o evento de alteração do campo de entrada
+    const valorServicoInput = document.getElementById('valorServico');
+
+    valorServicoInput.addEventListener('input', function () {
+        const valorInserido = parseFloat(valorServicoInput.value.replace(',', '.'));
+        if (!isNaN(valorInserido)) {
+            valorServicoInput.value = formatarComoDinheiro(valorInserido);
+        }
+    });
+    function validarFormulario() {
+    var nome = document.getElementById("nome").value;
+    var email = document.getElementById("email").value;
+    var senha = document.getElementById("senha").value;
+
+    // Verifique se os campos estão preenchidos
+    if (nome === "" || email === "" || senha === "") {
+        alert("Por favor, preencha todos os campos.");
+        return false;
+    }
+
+    // Verifique o formato do email usando uma expressão regular
+    var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!regexEmail.test(email)) {
+        alert("O formato do email é inválido.");
+        return false;
+    }
+
+    // Outras verificações de validação podem ser adicionadas conforme necessário
+
+    // Se tudo estiver válido, o formulário será enviado
+    return true;
+}
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

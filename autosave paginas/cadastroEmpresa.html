@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+        
+        
+        
+        .botao{width: 200px;height: 50px; flex-shrink: 0; background: #FF7A00; color: #fff;text-align: center; 
+               font-family: Montserrat;font-size: 100%; border-color: #FF7A00;}
+
+
+        
+      </style>
+    <title>CADASTRO</title>
+</head>
+<body>
+    <div class="text-center container mt-5">
+        <h1 style="font-family: 'Montserrat', sans-serif;"><span style="color:#FF7A00;">Auto</span> Save</h1>
+        <p>Cadastre sua empresa e garanta profissionais qualificados para sua carga</p>
+    </div>
+    
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="esquerdo">
+                    <form id="myForm" onsubmit="return validarFormulario()">
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label">Nome da Empresa</label>
+                            <input id="nome" style="background-color: #D9D9D9; width: 100%;" placeholder="Trans Faith" type="text" class="form-control"  required>
+                            
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label">CNPJ</label>
+                            <input id="email" style="background-color: #D9D9D9; width: 100%;" placeholder="XX. XXX. XXX/0001-XX" type="text" class="form-control"required >
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="esquerdo">
+                    <form>
+                        
+                    </form>
+                </div>
+                <div class="esquerdo">
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label">Email</label>
+                            <input id="senha" style="background-color: #D9D9D9; width: 100%;" placeholder="autosavefretes@gmail.com" type="email" class="form-control" >
+                        </div>
+                    </form>
+                </div>
+                <div class="esquerdo">
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label">Senha</label>
+                            <input style="background-color: #D9D9D9; width: 100%;" placeholder="**********" type="password" class="form-control" >
+                        </div>
+                    </form>
+                </div>
+                
+                
+            </div>
+    
+            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                <img src="./img/meio forms2.svg" alt="Imagem de Divisão" class=" d-none d-md-block">
+            </div>
+    
+            <div class="col-md-5">
+                <div class="direito">
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label">Telefone</label>
+                            <input style="background-color: #D9D9D9;" placeholder="(16) 9999-9999" type="text" class="form-control" >
+                        </div>
+                    </form>
+                </div>
+                <div class="form-group">
+                    <label for="fileInput"><h4>Abaixo adicione uma foto da logo de  sua empresa:</h4></label>
+                    <div class="custom-file"> <br>      
+                        <input type="file" class="custom-file-input" id="fileInput">
+                        <label class="custom-file-label" for="fileInput">Escolha um arquivo</label>
+                    </div>
+                </div>
+                <div style="text-align: right;" class="col text-right">
+                    <a href="cadastroEmpresa2.html" type="submit"  class=" botao btn btn-primary">Cadastrar Empresa</a>
+                </div>
+                
+
+                
+        
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+    
+    
+    
+
+
+<script>
+    function validarFormulario() {
+    var nome = document.getElementById("nome").value;
+    var email = document.getElementById("email").value;
+    var senha = document.getElementById("senha").value;
+
+    // Verifique se os campos estão preenchidos
+    if (nome === "" || email === "" || senha === "") {
+        alert("Por favor, preencha todos os campos.");
+        return false;
+    }
+
+    // Verifique o formato do email usando uma expressão regular
+    var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!regexEmail.test(email)) {
+        alert("O formato do email é inválido.");
+        return false;
+    }
+
+    // Outras verificações de validação podem ser adicionadas conforme necessário
+
+    // Se tudo estiver válido, o formulário será enviado
+    return true;
+}
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
